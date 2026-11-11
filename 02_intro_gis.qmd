@@ -765,6 +765,8 @@ We do not have time to tackle this topic today, But see
 [here](https://doc.esri.com/en/arcgis-online/latest/manage-data/calculate-fields.html)
 for more information on how to do this.
 
+<hr>
+
 ## Exporting Data
 
 At some point in your analysis, you might want to also download the data
