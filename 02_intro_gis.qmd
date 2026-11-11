@@ -11,13 +11,13 @@ This lesson focuses on learning more about the different types of
 geographic data and learning how to import and work with your own data
 in ArcGIS Online. At the end of this workshop you will:
 
--   Have a better understanding of various vector and raster geospatial
-    data types
--   Know how to import external tabular data into ArcGIS Online
--   Know how to edit or add data to a feature layer
--   Better understand the difference between continuous and categorical
-    raster layers
--   Know how to export data from ArcGIS Online to your local machine
+- Have a better understanding of various vector and raster geospatial
+  data types
+- Know how to import external tabular data into ArcGIS Online
+- Know how to edit or add data to a feature layer
+- Better understand the difference between continuous and categorical
+  raster layers
+- Know how to export data from ArcGIS Online to your local machine
 
 ## Review: Annotations vs. Data
 
@@ -111,14 +111,14 @@ Mama](https://graphicmama.com/blog/vector-and-raster-whats-the-difference/)](ima
 So far we have only looked at vector data. Vector data represents
 discrete geographic features using coordinate geometry:
 
--   **Points**: Single $(X, Y)$ coordinate pairs representing discrete
-    locations (e.g., bike racks, bus stops, accident locations).
--   **Lines (Polylines)**: Ordered sequences of vertices connecting
-    locations to represent linear features or networks (e.g., bike
-    paths, roads, transit routes, streams).
--   **Polygons**: Closed shapes enclosing an area defined by connected
-    coordinate vertices (e.g., campus buildings, land parcels, parks,
-    water bodies).
+- **Points**: Single $(X, Y)$ coordinate pairs representing discrete
+  locations (e.g., bike racks, bus stops, accident locations).
+- **Lines (Polylines)**: Ordered sequences of vertices connecting
+  locations to represent linear features or networks (e.g., bike paths,
+  roads, transit routes, streams).
+- **Polygons**: Closed shapes enclosing an area defined by connected
+  coordinate vertices (e.g., campus buildings, land parcels, parks,
+  water bodies).
 
 Every shape is tied to a row in an attribute table, where each column
 holds specific properties describing that feature. For example, if we
@@ -139,24 +139,26 @@ their data.
 
 Attributes may be divided into three types:
 
--   Nominal: information with labels and names - building type
+- Nominal: information with labels and names - building type
 
--   Numerical: information that can be counted or has numerical importance - shape area
+- Numerical: information that can be counted or has numerical
+  importance - shape area
 
--   Ordinal: information that can be ordered or ranked in some way - floor count
+- Ordinal: information that can be ordered or ranked in some way - floor
+  count
 
 ### Raster Data
 
 Raster data represents the landscape as a regular grid of square cells
 (pixels) organized into rows and columns.
 
--   **Single-band rasters**: Each pixel contains a single numerical
-    value representing a continuous measurement (such as elevation in a
-    Digital Elevation Model \[DEM\], slope, or temperature) or an
-    integer code representing a category (such as land cover types).
--   **Multi-band rasters**: Each pixel contains multiple values across
-    different spectral channels or bands (such as red, green, blue, and
-    near-infrared bands in aerial photography or satellite imagery).
+- **Single-band rasters**: Each pixel contains a single numerical value
+  representing a continuous measurement (such as elevation in a Digital
+  Elevation Model \[DEM\], slope, or temperature) or an integer code
+  representing a category (such as land cover types).
+- **Multi-band rasters**: Each pixel contains multiple values across
+  different spectral channels or bands (such as red, green, blue, and
+  near-infrared bands in aerial photography or satellite imagery).
 
 Below is a single band raster. The value of each pixel is elevation.
 
@@ -205,10 +207,10 @@ area:
     roads to distinguish bike-friendly streets from arterial highways.
 4.  Filter out the bike paths
 
--   GOTCHA: most of the attribute data is blank. We will leave all of
-    the roads turned on.
--   screenshot of map with roads symbolized for bikes. Map 1 currently
-    has default blue.
+- GOTCHA: most of the attribute data is blank. We will leave all of the
+  roads turned on.
+- screenshot of map with roads symbolized for bikes. Map 1 currently has
+  default blue.
 
 ::: {.callout-tip collapse="false"}
 ### Modify vector symbology
@@ -234,9 +236,9 @@ When outside of ArcGIS Online, geospatial raster data comes in many
 different formats. TIFFs, Grids, netCDF, iiif, web map services. Too
 many to list!
 
--   ArcGIS Online variations: while many of these start somewhere as TIFFs,
-    they are all ingested into AGO as flavors of 
-    `Tiled imagery layers`
+- ArcGIS Online variations: while many of these start somewhere as
+  TIFFs, they are all ingested into AGO as flavors of
+  `Tiled imagery layers`
 
 Let's add a Digital Elevation Model to out map: `ucsb_local_dem`. By
 default, a `single channel` or `one band` raster is displayed as
@@ -270,16 +272,17 @@ hundreds of feet in the foothills, as well as the grid cell resolution.
 
 ## yes. because sea level.
 
-** screenshot here **
+\*\* screenshot here \*\*
 
 To do: put in screenshot with properties here. The properties table
 shows the maximum and minimum values
 :::
 
 #### Applying a Divergent Color Scheme
-Data that moves around a zero point, such as our batho-topo elevation model,
-is knows as ** divergent **. It is very helpful to your map viewers to visualize
-this typ of data with a divergent color scheme.
+
+Data that moves around a zero point, such as our batho-topo elevation
+model, is knows as \*\* divergent \*\*. It is very helpful to your map
+viewers to visualize this typ of data with a divergent color scheme.
 
 By default, continuous raster layers display using a grayscale "Stretch"
 renderer (low values '0' dark, and high values 255 light). To clearly
@@ -302,9 +305,12 @@ lower elevation display in blue and green and higher elevation in brown
 and white.
 
 ![Digital Elevation Model with color
-scale](images/workshop2/w2_dem_colored.png){fig-alt="Digital Elevation Model with color scaled for DEM: white a higher elevation, blue and green for lower elevation"
-scale](images/workshop2/w2_dem_colored.png){fig-alt="Digital Elevation Model with color scaled for DEM: white a higer elevation, blue and green for lower elevation"
-width="90%" fig-align="center"}
+scale](images/workshop2/w2_dem_colored.png){fig-alt="Digital Elevation
+Model with color scaled for DEM: white a higher elevation, blue and
+green for lower elevation"
+scale\](images/workshop2/w2_dem_colored.png){fig-alt="Digital Elevation
+Model with color scaled for DEM: white a higer elevation, blue and green
+for lower elevation" width="90%" fig-align="center"}
 
 #### 'Binning' a raster
 
@@ -353,12 +359,12 @@ it may. For example, while the values below have a natural order (The 3
 Little Piggies Construction Scale), the numbers are *ordinal* but
 arbitrary:
 
--   1 = reinforced concrete or steel beam
--   2 = wood stick construction
--   3 = baked brick masonry
--   4 = adobe
--   5 = sun brick / mud daub
--   6 = straw bail
+- 1 = reinforced concrete or steel beam
+- 2 = wood stick construction
+- 3 = baked brick masonry
+- 4 = adobe
+- 5 = sun brick / mud daub
+- 6 = straw bail
 
 While elevation is a **continuous raster** (values change smoothly along
 a numerical gradient representing a quantity), other rasters are
@@ -399,30 +405,30 @@ spectrum. 8-band images. Let's add one of those layers now:
 
 2.  **Imagery Layers vs. Basemaps**:
 
-    -   An **basemap** sits at the bottom of the map canvas, serving
-        purely as a static background context. Esri has options that are
-        satellite and aerial views.
-    -   An **imagery layer** is a data layer added to your map stack. It
-        can be re-ordered above or below other layers, adjusted with
-        transparency and blend modes, queried for pixel values, and
-        analyze for groundcover characteristics.
+    - An **basemap** sits at the bottom of the map canvas, serving
+      purely as a static background context. Esri has options that are
+      satellite and aerial views.
+    - An **imagery layer** is a data layer added to your map stack. It
+      can be re-ordered above or below other layers, adjusted with
+      transparency and blend modes, queried for pixel values, and
+      analyze for groundcover characteristics.
 
 **Time to save our map!!!**
 
 ::: callout-note
 ## Esri ArcGIS Online Credits
 
--   All ArcGIS Online accounts created under the UCSB site license are
-    allocated **1000 service credits** per license year.
--   **Transactions**: Some analysis operations and storage consume
-    service credits. For more information, visit Esri's [Understand
-    Credits](https://doc.arcgis.com/en/arcgis-online/administer/credits.htm)
-    page.
--   **Manage your content**: Periodically review and delete unnecessary
-    hosted layers and analysis outputs to conserve credits.
--   **Data Stewardship**: Objects stored in ArcGIS Online should be
-    considered ephemeral. Your content access depends on the UCSB
-    Library's Higher Education Site License.
+- All ArcGIS Online accounts created under the UCSB site license are
+  allocated **1000 service credits** per license year.
+- **Transactions**: Some analysis operations and storage consume service
+  credits. For more information, visit Esri's [Understand
+  Credits](https://doc.arcgis.com/en/arcgis-online/administer/credits.htm)
+  page.
+- **Manage your content**: Periodically review and delete unnecessary
+  hosted layers and analysis outputs to conserve credits.
+- **Data Stewardship**: Objects stored in ArcGIS Online should be
+  considered ephemeral. Your content access depends on the UCSB
+  Library's Higher Education Site License.
 :::
 
 Its initial appearance is dark -- work on its visualization. Here are
@@ -438,11 +444,11 @@ this so that it appears most natural on your screen.
 
 ::: callout-tip
 ## Challenge: play with different band combinations. What do you think Band
+
 1 is good for?
 :::
 
-* Needs a better question and explanations *
-
+- Needs a better question and explanations \*
 
 ### Layer Management and Rasters
 
@@ -450,13 +456,14 @@ this so that it appears most natural on your screen.
     on top of the raster elevation layers in the layer stack so they are
     not hidden.
 2.  **Imagery Layers vs Basemaps**:
-    -   A **basemap** sits at the bottom of the map canvas, serving
-        purely as a static background context. Esri has options that are
-        satellite and aerial views. You cannot perform analysis on basemaps.
-    -   An **imagery layer** is a data layer added to your map stack. It
-        can be re-ordered above or below other layers, adjusted with
-        transparency and blend modes, queried for pixel values, and
-        analyze for ground cover characteristics.
+    - A **basemap** sits at the bottom of the map canvas, serving purely
+      as a static background context. Esri has options that are
+      satellite and aerial views. You cannot perform analysis on
+      basemaps.
+    - An **imagery layer** is a data layer added to your map stack. It
+      can be re-ordered above or below other layers, adjusted with
+      transparency and blend modes, queried for pixel values, and
+      analyze for ground cover characteristics.
 
 At this point your map should look something like this:
 
@@ -469,17 +476,17 @@ At this point your map should look something like this:
 ::: callout-note
 ## Esri ArcGIS Online Credits
 
--   All ArcGIS Online accounts created under the UCSB site license are
-    allocated **1000 service credits** per license year.
--   **Transactions**: Some analysis operations and storage consume
-    service credits. For more information, visit Esri's [Understand
-    Credits](https://doc.arcgis.com/en/arcgis-online/administer/credits.htm)
-    page.
--   **Manage your content**: Periodically review and delete unnecessary
-    hosted layers and analysis outputs to conserve credits.
--   **Data Stewardship**: Objects stored in ArcGIS Online should be
-    considered ephemeral. Your content access depends on the UCSB
-    Library's Higher Education Site License.
+- All ArcGIS Online accounts created under the UCSB site license are
+  allocated **1000 service credits** per license year.
+- **Transactions**: Some analysis operations and storage consume service
+  credits. For more information, visit Esri's [Understand
+  Credits](https://doc.arcgis.com/en/arcgis-online/administer/credits.htm)
+  page.
+- **Manage your content**: Periodically review and delete unnecessary
+  hosted layers and analysis outputs to conserve credits.
+- **Data Stewardship**: Objects stored in ArcGIS Online should be
+  considered ephemeral. Your content access depends on the UCSB
+  Library's Higher Education Site License.
 :::
 
 Uploading a raster image to ArcGIS Online takes up storage, so we aren't
@@ -500,52 +507,52 @@ onto your device.
 ::: {.callout-tip collapse="true"}
 ## Challenge - Inspect the trailhead data
 
--   What are the attributes stored in this dataset?
--   Which attributes are storing the geospatial information?
--   What is the quality of this dataset? Anything suspect?
+- What are the attributes stored in this dataset?
+- Which attributes are storing the geospatial information?
+- What is the quality of this dataset? Anything suspect?
 :::
 
 #### CSV import wizard
 
--   Add layer from file
+- Add layer from file
 
 ![](images/workshop2/import_csv-add.png){fig-alt="Unfold the Add menu"
 width="40%"}
 
--   Select "Your Device" and browse to the csv file you want to import
+- Select "Your Device" and browse to the csv file you want to import
 
 ![](images/workshop2/import_csv-file.png){fig-alt="Browse or drop file"
 width="80%"}
 
--   Leave the default option "Create a hosted feature layer and add it
-    to the map" and click Next
+- Leave the default option "Create a hosted feature layer and add it to
+  the map" and click Next
 
 ![](images/workshop2/import_csv-layer.png){fig-alt="Select 'hosted feature'"
 width="80%"}
 
--   Select the attributes you would like to import as well as rename
-    fields as you see necessary. You can also use this step to rename
-    any of the field. Let's select all the fields up to "Overview" and
-    Rename "Title" as "Name". It is also a good practice to check that
-    the field types are aligned with what you were expecting.
+- Select the attributes you would like to import as well as rename
+  fields as you see necessary. You can also use this step to rename any
+  of the field. Let's select all the fields up to "Overview" and Rename
+  "Title" as "Name". It is also a good practice to check that the field
+  types are aligned with what you were expecting.
 
 ![](images/workshop2/import_csv-field.png){fig-alt="Select the attributes you want to import and rename them as needed"
 width="100%"}
 
--   Match the latitude and longitude information used by ArcGIS to
-    generate the location with your data attributes.
+- Match the latitude and longitude information used by ArcGIS to
+  generate the location with your data attributes.
 
 ![](images/workshop2/import_csv-latlong.png){fig-alt="Match the Latitude and longitude attribute from your data with the information that ArcGIS will use to create the spatial locations"
 width="80%"}
 
--   Save your new data layer under your user account creating a
-    `ucsb_bike` folder if you have not one yet
+- Save your new data layer under your user account creating a
+  `ucsb_bike` folder if you have not one yet
 
 ![](images/workshop2/import_csv-save.png){fig-alt="Interface to Save your new layer under your account"
 width="80%"}
 
--   Zoom out to see the trailhead locations! Of course now we need to
-    make it look better :)
+- Zoom out to see the trailhead locations! Of course now we need to make
+  it look better :)
 
 ![](images/workshop2/import_csv-map.png){fig-alt="Map displaying the new imported layer about trailheads in the Santa Barbara vicinity"
 width="100%"}
@@ -561,13 +568,13 @@ Positioning System
 Coordinate systems can be divided into two main categories: Projected
 and Geographic Coordinate Systems.
 
--   **Projected** Coordinate Systems use a 2D flat surface to define
-    locations and is measured in linear units. Locations are identified
-    by x,y coordinates
+- **Projected** Coordinate Systems use a 2D flat surface to define
+  locations and is measured in linear units. Locations are identified by
+  x,y coordinates
 
--   **Geographic** Coordinate Systems use a 3D spherical surface
-    measured in angular units to define locations on earth. A point is
-    referred by its latitude and longitude.
+- **Geographic** Coordinate Systems use a 3D spherical surface measured
+  in angular units to define locations on earth. A point is referred by
+  its latitude and longitude.
 
 There are plethora of CRSs that all have different accuracy and other
 advantages depending on your location and extent of your area of
@@ -581,13 +588,13 @@ coordinate system that we are dealing with?
 ::: {.callout-tip collapse="false"}
 ## Challenge - Make the trailhead layer look nice
 
--   Choose the trail `Difficulty` attribute to add a color ramp
--   Reorder the categories so their are matching the difficulty order
-    (and not the alphabetical one)
--   Choose a good color ramp, e.g. green-yellow for easy-moderate and
-    red-purple for difficult
--   Increase the point size to 12px
--   Give a title to the legend "Trail difficulty"
+- Choose the trail `Difficulty` attribute to add a color ramp
+- Reorder the categories so their are matching the difficulty order (and
+  not the alphabetical one)
+- Choose a good color ramp, e.g. green-yellow for easy-moderate and
+  red-purple for difficult
+- Increase the point size to 12px
+- Give a title to the legend "Trail difficulty"
 :::
 
 In the end, you should have a legend similar to the following:
@@ -751,6 +758,13 @@ previously.
 values](images/workshop2/w2_values-table.png){fig-alt="Attribute table with the newly entered values"
 width="100%" fig-align="center"}
 
+Of course, there are more advanced ways to edit values than cell by
+cell. One of them is using the filed calculator that let's you use
+expressions (conditions, formulas, ...) to calculate values of a field.
+We do not have time to tackle this topic today, But see
+[here](https://doc.esri.com/en/arcgis-online/latest/manage-data/calculate-fields.html)
+for more information on how to do this.
+
 ## Exporting Data
 
 At some point in your analysis, you might want to also download the data
@@ -764,30 +778,30 @@ You can not export a layer from the Map Viewer, you will need to first
 return to the “My Content” view. You can do this by using the “Burger”
 menu at the top-left of your Map view and selecting Content.
 
--   Once in the My content view, locate and click on the spatial
-    trailhead layer you imported from the CSV file to go to the Overview
-    page of that layer.
+- Once in the My content view, locate and click on the spatial trailhead
+  layer you imported from the CSV file to go to the Overview page of
+  that layer.
 
 ![](images/workshop2/export-overview.png){fig-alt="Overview page for the feature layer of Santa Barbara County trailheads."
 width="100%"}
 
--   Unfold the menu on the right completely, select Export data, and
-    choose the GeoJSON format.
+- Unfold the menu on the right completely, select Export data, and
+  choose the GeoJSON format.
 
 ![](images/workshop2/export-overview_uncollapsed.png){fig-alt="Overview page for the feature layer of Santa Barbara County trailheads with the option menu on the right uncollapsed and showing the Export Data option"
 width="100%"}
 
--   On the next window, leave the default options and choose your
-    ucsb_bike folder as location. Click on Export. Note that exporting
-    data can take some time, so be patient :)
+- On the next window, leave the default options and choose your
+  ucsb_bike folder as location. Click on Export. Note that exporting
+  data can take some time, so be patient :)
 
 ![](images/workshop2/export-geojson.png){fig-alt="Wizard page to export a geojson file: title, Folder location, Categories, Tags and Summary are the available options"
 width="50%"}
 
--   Once the export is completed, you should automatically be redirected
-    to the Overview page of this new dataset. This time, Download should
-    be available in the menu on the right side of the page. Click on it
-    and select a location on your local computer and a filename.
+- Once the export is completed, you should automatically be redirected
+  to the Overview page of this new dataset. This time, Download should
+  be available in the menu on the right side of the page. Click on it
+  and select a location on your local computer and a filename.
 
 ![](images/workshop2/export-download.png){fig-alt="Overview page for the newly created geojson layer. The menu on the right has now the Download option available"
 width="100%"}
@@ -817,19 +831,18 @@ Shaded relief simulates how sunlight illuminates terrain, casting
 shadows based on the position of the sun measured as two angles: Azimuth
 and Altitude
 
--   **Azimuth**: The compass direction from which the illumination
-    source (the sun) originates, measured in degrees clockwise from
-    north (0° = North, 90° = East, 180° = South, 270° = West). In
-    cartography, the sun is traditionally positioned in the northwest
-    (315°) or west (270°) to match how the human brain interprets light
-    and shadow, preventing an optical illusion known as "relief
-    inversion" where mountains appear as valleys. For our map, we
-    position the light source from the west.
--   **Altitude**: The angle of the sun above the horizon, measured from
-    0° (level with the horizon at sunrise/sunset) to 90° (directly
-    overhead at solar noon). A lower altitude (e.g., 30°–45°, typical of
-    low winter sun) produces longer, more dramatic shadows that
-    accentuate ridge lines, canyons, and valleys.
+- **Azimuth**: The compass direction from which the illumination source
+  (the sun) originates, measured in degrees clockwise from north (0° =
+  North, 90° = East, 180° = South, 270° = West). In cartography, the sun
+  is traditionally positioned in the northwest (315°) or west (270°) to
+  match how the human brain interprets light and shadow, preventing an
+  optical illusion known as "relief inversion" where mountains appear as
+  valleys. For our map, we position the light source from the west.
+- **Altitude**: The angle of the sun above the horizon, measured from 0°
+  (level with the horizon at sunrise/sunset) to 90° (directly overhead
+  at solar noon). A lower altitude (e.g., 30°–45°, typical of low winter
+  sun) produces longer, more dramatic shadows that accentuate ridge
+  lines, canyons, and valleys.
 
 ![](images/workshop2/relief_options.png)
 
